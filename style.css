@@ -1,0 +1,855 @@
+
+:root {
+  --cream: #f4eee6;
+  --cream-light: #faf7f2;
+  --beige: #e8ddd0;
+  --brown: #362722;
+  --brown-soft: #5c4a43;
+  --brown-light: #8d7a70;
+  --line: rgba(54, 39, 34, 0.22);
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  color: var(--brown);
+  font-family: var(--sans);
+
+  background:
+    radial-gradient(circle at 0% 18%, rgba(215, 198, 181, 0.22) 0, transparent 25%),
+    radial-gradient(circle at 100% 72%, rgba(215, 198, 181, 0.16) 0, transparent 24%),
+    var(--cream);
+}
+
+/* FIXED WATERMARK */
+
+.page-watermark {
+  position: fixed;
+  z-index: 0;
+
+  left: 50%;
+  top: 75%;
+  bottom: auto;
+
+  width: min(420px, 92vw);
+  height: auto;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* MAIN */
+
+.menu {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 560px;
+
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+/* HEADER */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr minmax(160px, 1.35fr) 1fr;
+  align-items: start;
+
+  width: 100%;
+  min-height: 205px;
+
+  margin-bottom: 34px;
+  padding-top: 12px;
+}
+
+.hero-center {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.brand-name {
+  margin: 0;
+
+  color: var(--brown);
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+
+  letter-spacing: 14px;
+}
+
+.brand-cafe {
+  margin-top: 14px;
+  padding-left: 8px;
+
+  color: var(--brown);
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  letter-spacing: 10px;
+}
+
+.tagline-row {
+  display: grid;
+  grid-template-columns: 44px auto 44px;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 18px;
+}
+
+.tagline-row span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+.tagline-row p {
+  margin: 0;
+
+  color: var(--brown-soft);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1;
+
+  letter-spacing: 1.7px;
+  white-space: nowrap;
+}
+
+/* HEADER LINE ART */
+
+.hero-art-box {
+  position: relative;
+
+  width: 100%;
+  height: 145px;
+
+  overflow: hidden;
+
+  opacity: 0.52;
+  pointer-events: none;
+}
+
+.hero-art {
+  position: absolute;
+
+  width: 205px;
+  height: auto;
+
+  mix-blend-mode: multiply;
+}
+
+.hero-art-box-left .hero-art {
+  top: -2px;
+  left: -58px;
+}
+
+.hero-art-box-right .hero-art {
+  top: -2px;
+  right: -58px;
+}
+
+/* NAV */
+
+.menu-nav {
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 auto 58px;
+  padding: 6px;
+
+  background: rgba(250, 247, 242, 0.88);
+
+  border: 1px solid rgba(54, 39, 34, 0.09);
+  border-radius: 100px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.menu-nav a {
+  padding: 9px 13px;
+
+  color: var(--brown);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 100px;
+}
+
+.menu-nav a:hover {
+  background: rgba(54, 39, 34, 0.07);
+}
+
+/* MAIN SECTION */
+
+.main-section {
+  position: relative;
+
+  margin-bottom: 84px;
+  scroll-margin-top: 88px;
+}
+
+/* BIG SECTION TITLE */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 38px;
+}
+
+.section-heading::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--line);
+}
+
+.section-heading h1 {
+  margin: 0;
+
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1;
+
+  letter-spacing: 4.5px;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-number {
+  color: var(--brown);
+
+  font-family: var(--serif);
+  font-size: 14px;
+
+  letter-spacing: 3px;
+}
+
+/* CATEGORY */
+
+.category {
+  margin-bottom: 52px;
+}
+
+.category-title {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px 48px;
+  align-items: end;
+
+  column-gap: 10px;
+
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.category-title h2 {
+  margin: 0;
+
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 2.6px;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.category-size {
+  display: block;
+}
+
+.category-price {
+  display: block;
+
+  padding-bottom: 2px;
+
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* ITEMS */
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px 48px;
+  align-items: start;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.size {
+  padding-top: 1px;
+
+  color: var(--brown-light);
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+
+  text-align: right;
+  white-space: nowrap;
+}
+
+.name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 3px;
+
+  color: var(--brown-light);
+
+  font-family: var(--serif);
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* DIVIDER */
+
+.soft-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 50px 0;
+}
+
+.soft-divider > span:not(.divider-heart) {
+  height: 1px;
+  background: var(--line);
+}
+
+.divider-heart {
+  color: var(--brown-light);
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+/* MILK ALTERNATIVES CARD */
+
+.info-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 26px;
+  padding: 18px 22px 18px 12px;
+
+  background: rgba(250, 247, 242, 0.52);
+
+  border: 1px solid rgba(54, 39, 34, 0.16);
+  border-radius: 18px;
+}
+
+.info-icon-wrap {
+  flex: 0 0 95px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  min-height: 150px;
+
+  overflow: visible;
+}
+
+.milk-icon {
+  display: block;
+
+  width: 105px;
+  max-height: none;
+  height: auto;
+
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+
+  transform: scale(1.4);
+  transform-origin: center;
+}
+
+.info-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.info-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+.info-heading h3 {
+  margin: 0;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+.info-heading span {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.info-card p {
+  margin: 4px 0;
+  font-size: 11px;
+}
+
+.info-card small {
+  margin-left: 4px;
+
+  color: var(--brown-light);
+
+  font-family: var(--serif);
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* TEA + TONIC */
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 22px;
+
+  margin-bottom: 14px;
+}
+
+.compact {
+  min-width: 0;
+}
+
+/* Force both titles to occupy the same one-line height */
+.compact .category-title {
+  min-height: 36px;
+  align-items: end;
+}
+
+.compact .category-title h2 {
+  font-size: 17px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.compact .item {
+  grid-template-columns: minmax(0, 1fr) 47px 25px;
+  gap: 6px;
+}
+
+.compact .name {
+  font-size: 9px;
+}
+
+.compact .size {
+  font-size: 8px;
+}
+
+.compact .price {
+  font-size: 9px;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+
+  margin-top: 82px;
+  padding-top: 36px;
+
+  text-align: center;
+
+  border-top: 1px solid var(--line);
+}
+
+.footer-heart {
+  position: absolute;
+
+  top: -15px;
+  left: 50%;
+
+  padding: 0 10px;
+
+  background: var(--cream);
+
+  font-family: var(--serif);
+  font-size: 25px;
+
+  transform: translateX(-50%);
+}
+
+footer p,
+footer span {
+  margin: 0;
+
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 2.6px;
+
+  text-transform: uppercase;
+}
+
+footer span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--brown-light);
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+  .menu {
+    max-width: 100%;
+    padding: 22px 18px 48px;
+  }
+
+  .page-watermark {
+    width: min(350px, 78vw);
+    top: 70%;
+    bottom: auto;
+    opacity: 0.085;
+  }
+
+  .hero {
+    grid-template-columns: 0.85fr minmax(145px, 1.5fr) 0.85fr;
+
+    min-height: 185px;
+
+    margin-bottom: 28px;
+    padding-top: 8px;
+  }
+
+  .brand-name {
+    font-size: 56px;
+    letter-spacing: 9px;
+  }
+
+  .brand-cafe {
+    margin-top: 12px;
+    padding-left: 6px;
+
+    font-size: 13px;
+    letter-spacing: 7px;
+  }
+
+  .tagline-row {
+    grid-template-columns: 26px auto 26px;
+
+    gap: 7px;
+
+    margin-top: 14px;
+  }
+
+  .tagline-row p {
+    font-size: 14px;
+    letter-spacing: 1.1px;
+  }
+
+  .hero-art-box {
+    height: 116px;
+    opacity: 0.56;
+  }
+
+  .hero-art {
+    width: 170px;
+  }
+
+  .hero-art-box-left .hero-art {
+    top: 0;
+    left: -66px;
+  }
+
+  .hero-art-box-right .hero-art {
+    top: 0;
+    right: -66px;
+  }
+
+  .menu-nav {
+    margin-bottom: 48px;
+  }
+
+  .menu-nav a {
+    padding: 8px 11px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .main-section {
+    margin-bottom: 70px;
+  }
+
+  .section-heading {
+    gap: 10px;
+
+    margin-bottom: 32px;
+  }
+
+  .section-heading h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .section-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .category {
+    margin-bottom: 44px;
+  }
+
+  .category-title,
+  .item {
+    grid-template-columns: minmax(0, 1fr) 60px 42px;
+    column-gap: 8px;
+  }
+
+  .category-title h2 {
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+
+  .name {
+    font-size: 11px;
+  }
+
+  .size {
+    font-size: 9px;
+  }
+
+  .price {
+    font-size: 11px;
+  }
+
+  .info-card {
+    gap: 12px;
+
+    padding: 16px 14px;
+  }
+
+  .info-icon-wrap {
+    flex-basis: 90px;
+    min-height: 115px;
+  }
+
+  .milk-icon {
+    width: 85px;
+    max-height: 115px;
+  }
+
+  .drinks-grid {
+    gap: 14px;
+  }
+
+  .compact .category-title {
+    grid-template-columns: minmax(0, 1fr) 36px 22px;
+    column-gap: 4px;
+    min-height: 34px;
+  }
+
+  .compact .category-title h2 {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+  }
+
+  .compact .item {
+    grid-template-columns: minmax(0, 1fr) 43px 22px;
+    gap: 4px;
+  }
+
+  .compact .name {
+    font-size: 8.5px;
+  }
+
+  .compact .size {
+    font-size: 7.5px;
+  }
+
+  .compact .price {
+    font-size: 8.5px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 390px) {
+
+  .menu {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 0.78fr minmax(138px, 1.55fr) 0.78fr;
+  }
+
+  .brand-name {
+    font-size: 52px;
+    letter-spacing: 8px;
+  }
+
+  .brand-cafe {
+    font-size: 12px;
+    letter-spacing: 6px;
+  }
+
+  .hero-art {
+    width: 158px;
+  }
+
+  .hero-art-box-left .hero-art {
+    left: -67px;
+  }
+
+  .hero-art-box-right .hero-art {
+    right: -67px;
+  }
+
+  .section-heading h1 {
+    font-size: 22px;
+    letter-spacing: 2.5px;
+  }
+
+  .category-title,
+  .item {
+    grid-template-columns: minmax(0, 1fr) 56px 39px;
+    column-gap: 6px;
+  }
+
+  .category-title h2 {
+    font-size: 18px;
+  }
+
+  .drinks-grid {
+    gap: 10px;
+  }
+
+  .compact .category-title {
+    grid-template-columns: minmax(0, 1fr) 32px 20px;
+  }
+
+  .compact .category-title h2 {
+    font-size: 13px;
+    letter-spacing: 0.9px;
+  }
+
+  .compact .item {
+    grid-template-columns: minmax(0, 1fr) 40px 20px;
+  }
+
+  .compact .name {
+    font-size: 8px;
+  }
+
+  .compact .size {
+    font-size: 7px;
+  }
+
+  .compact .price {
+    font-size: 8px;
+  }
+}
