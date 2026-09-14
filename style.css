@@ -70,6 +70,36 @@ body {
 
 }
 
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: #2f2018;
+  cursor: pointer;
+  opacity: 0.45;
+}
+
+.lang-btn.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.language-switch span {
+  opacity: 0.3;
+}
+
 
 
 /* HEADER */
@@ -747,6 +777,11 @@ footer span {
     padding: 12px 22px 46px;
   }
 
+    .language-switch {
+    font-size: 9px;
+    margin-bottom: 2px;
+    padding-right: 4px;
+  }
 
   /* ===== HEADER ===== */
 
@@ -989,8 +1024,8 @@ footer span {
 
 
   .milk-icon {
-    width: 115px;
-    height: 115px;
+    width: 130px;
+    height: 130px;
 
     max-width: none;
 
@@ -1044,6 +1079,17 @@ footer span {
 
   }
 
+  .language-switch {
+    font-size: 8px;
+    gap: 6px;
+    margin-bottom: 0;
+    padding-right: 2px;
+  }
+
+  .language-switch a.active {
+  opacity: 1;
+  font-weight: 600;
+}
 
   .hero {
 
@@ -1102,8 +1148,8 @@ footer span {
 }
 
 .milk-icon {
-  width: 105px;
-  height: 105px;
+  width: 120px;
+  height: 120px;
 }
 
   .section-heading h1 {

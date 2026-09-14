@@ -26,6 +26,11 @@
 
   <main class="menu">
 
+<div class="language-switch">
+  <button type="button" class="lang-btn active" data-lang="ro">RO</button>
+  <span>|</span>
+  <button type="button" class="lang-btn" data-lang="en">EN</button>
+</div>
 
     <!-- HEADER -->
 
@@ -76,21 +81,11 @@
 
     <!-- QUICK NAV -->
 
-    <nav class="menu-nav">
-
-      <a href="#coffee">
-        Coffee
-      </a>
-
-      <a href="#drinks">
-        Drinks
-      </a>
-
-      <a href="#pastry">
-        Pastry
-      </a>
-
-    </nav>
+<nav class="menu-nav">
+  <a href="#coffee" data-ro="CAFEA" data-en="COFFEE">CAFEA</a>
+  <a href="#drinks" data-ro="BĂUTURI" data-en="DRINKS">BĂUTURI</a>
+  <a href="#pastry" data-ro="PATISERIE" data-en="PASTRY">PATISERIE</a>
+</nav>
 
 
 
@@ -101,9 +96,7 @@
 
       <div class="section-heading">
 
-        <h1>
-          Coffee
-        </h1>
+      <h1 data-ro="CAFEA" data-en="COFFEE">CAFEA</h1>
 
         <span class="section-price-label">
           Lei
@@ -130,9 +123,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Double Espresso
-        </span>
+      <span class="name"
+            data-ro="Espresso dublu"
+            data-en="Double Espresso">
+        Espresso dublu
+      </span>
 
         <span class="size"></span>
 
@@ -255,9 +250,9 @@
 
         <div class="category-title">
 
-          <h2>
-            Hot Chocolate
-          </h2>
+        <h2 data-ro="CIOCOLATĂ CALDĂ" data-en="HOT CHOCOLATE">
+          CIOCOLATĂ CALDĂ
+        </h2>
 
           <span class="category-size"></span>
 
@@ -270,9 +265,11 @@
 
         <div class="item">
 
-          <span class="name">
-            White Hot Chocolate
-          </span>
+        <span class="name"
+              data-ro="Ciocolată caldă albă"
+              data-en="White Hot Chocolate">
+          Ciocolată caldă albă
+        </span>
 
           <span class="size"></span>
 
@@ -285,9 +282,11 @@
 
         <div class="item">
 
-          <span class="name">
-            Dark Hot Chocolate
-          </span>
+        <span class="name"
+              data-ro="Ciocolată caldă neagră"
+              data-en="Dark Hot Chocolate">
+          Ciocolată caldă neagră
+        </span>
 
           <span class="size"></span>
 
@@ -331,18 +330,19 @@
 
           <div class="info-heading">
 
-            <h3>
-              Milk Alternatives
-            </h3>
+          <h3 data-ro="ALTERNATIVE DE LAPTE" data-en="MILK ALTERNATIVES">
+            ALTERNATIVE DE LAPTE
+          </h3>
 
           </div>
 
 
           <div class="milk-row">
 
-            <span>
-              Lactose Free Milk
-            </span>
+            <span data-ro="Lapte fără lactoză"
+            data-en="Lactose Free Milk">
+        Lapte fără lactoză
+      </span>
 
             <strong>
               0
@@ -353,9 +353,10 @@
 
           <div class="milk-row">
 
-            <span>
-              Oat Milk
-            </span>
+          <span data-ro="Lapte de ovăz"
+                data-en="Oat Milk">
+            Lapte de ovăz
+          </span>
 
             <strong>
               +4
@@ -378,9 +379,10 @@
 
       <div class="section-heading">
 
-        <h1>
-          Tea &amp; Matcha
-        </h1>
+      <h1 data-ro="CEAI & MATCHA"
+          data-en="TEA & MATCHA">
+        CEAI & MATCHA
+      </h1>
 
         <span class="section-price-label">
           Lei
@@ -406,9 +408,27 @@
 
       <div class="item">
 
-        <span class="name">
-          Apelsin Mint Tea
+    <span class="name"
+          data-ro="Ceai Apelsin Mint"
+          data-en="Apelsin Mint Tea">
+      Ceai Apelsin Mint
+    </span>
+            <span class="size"></span>
+
+        <span class="price">
+          15
         </span>
+
+      </div>
+
+
+      <div class="item">
+
+      <span class="name"
+            data-ro="Ceai de mușețel"
+            data-en="Chamomile Tea">
+        Ceai de mușețel
+      </span>
 
         <span class="size"></span>
 
@@ -421,9 +441,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Chamomile Tea
-        </span>
+      <span class="name"
+            data-ro="Ceai Guatemala Cascara"
+            data-en="Guatemala Cascara Tea">
+        Ceai Guatemala Cascara
+      </span>
 
         <span class="size"></span>
 
@@ -436,9 +458,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Guatemala Cascara Tea
-        </span>
+      <span class="name"
+            data-ro="Ceai negru - Studio 54"
+            data-en="Black Tea - Studio 54">
+        Ceai negru - Studio 54
+      </span>
 
         <span class="size"></span>
 
@@ -451,25 +475,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Black Tea - Studio 54
-        </span>
-
-        <span class="size"></span>
-
-        <span class="price">
-          15
-        </span>
-
-      </div>
-
-
-      <div class="item">
-
-        <span class="name">
-          Green Tea - Citronella
-        </span>
-
+      <span class="name"
+            data-ro="Ceai verde - Citronella"
+            data-en="Green Tea - Citronella">
+        Ceai verde - Citronella
+      </span>
         <span class="size"></span>
 
         <span class="price">
@@ -486,9 +496,10 @@
 
         <div class="category-title">
 
-          <h2>
-            Refreshments
-          </h2>
+        <h2 data-ro="BĂUTURI RĂCORITOARE"
+            data-en="REFRESHMENTS">
+          BĂUTURI RĂCORITOARE
+        </h2>
 
           <span class="category-size"></span>
 
@@ -595,9 +606,11 @@
 
         <div class="item">
 
-          <span class="name">
-            Still Water
-          </span>
+        <span class="name"
+            data-ro="Apă plată"
+            data-en="Still Water">
+        Apă plată
+      </span>
 
           <span class="size">
             500 ml
@@ -612,9 +625,12 @@
 
         <div class="item">
 
-          <span class="name">
-            Sparkling Water
-          </span>
+
+        <span class="name"
+              data-ro="Apă minerală"
+              data-en="Sparkling Water">
+          Apă minerală
+        </span>
 
           <span class="size">
             500 ml
@@ -639,9 +655,10 @@
 
       <div class="section-heading">
 
-        <h1>
-          Pastry
-        </h1>
+      <h1 data-ro="PATISERIE"
+          data-en="PASTRY">
+        PATISERIE
+      </h1>
 
         <span class="section-price-label">
           Lei
@@ -652,9 +669,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Focaccia cu pesto și rucola
-        </span>
+      <span class="name"
+            data-ro="Focaccia cu pesto și rucola"
+            data-en="Focaccia with pesto and arugula">
+        Focaccia cu pesto și rucola
+      </span>
 
         <span class="size"></span>
 
@@ -667,9 +686,27 @@
 
       <div class="item">
 
-        <span class="name">
-          Focaccia cu roșii și brânză maturată
+      <span class="name"
+            data-ro="Focaccia cu roșii și brânză maturată"
+            data-en="Focaccia with tomatoes and aged cheese">
+        Focaccia cu roșii și brânză maturată
+      </span>
+        <span class="size"></span>
+
+        <span class="price">
+          15
         </span>
+
+      </div>
+
+
+      <div class="item">
+
+      <span class="name"
+            data-ro="Focaccia cu măsline și ulei cu usturoi"
+            data-en="Focaccia with olives and garlic oil">
+        Focaccia cu măsline și ulei cu usturoi
+      </span>
 
         <span class="size"></span>
 
@@ -682,24 +719,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Focaccia cu măsline și ulei cu usturoi
-        </span>
-
-        <span class="size"></span>
-
-        <span class="price">
-          15
-        </span>
-
-      </div>
-
-
-      <div class="item">
-
-        <span class="name">
-          Corn cu ciocolată
-        </span>
+      <span class="name"
+            data-ro="Corn cu ciocolată"
+            data-en="Chocolate croissant">
+        Corn cu ciocolată
+      </span>
 
         <span class="size"></span>
 
@@ -712,9 +736,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Brânzoaică cu brânză dulce
-        </span>
+      <span class="name"
+            data-ro="Brânzoaică cu brânză dulce"
+            data-en="Sweet cheese pastry">
+        Brânzoaică cu brânză dulce
+      </span>
 
         <span class="size"></span>
 
@@ -727,9 +753,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Focaccia fără gluten
-        </span>
+      <span class="name"
+            data-ro="Focaccia fără gluten"
+            data-en="Gluten-free focaccia">
+        Focaccia fără gluten
+      </span>
 
         <span class="size"></span>
 
@@ -742,9 +770,12 @@
 
       <div class="item">
 
-        <span class="name">
-          Covrigi fără gluten
-        </span>
+
+      <span class="name"
+            data-ro="Covrigi fără gluten"
+            data-en="Gluten-free pretzels">
+        Covrigi fără gluten
+      </span>
 
         <span class="size"></span>
 
@@ -757,9 +788,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Melc cu nucă
-        </span>
+      <span class="name"
+            data-ro="Melc cu nucă"
+            data-en="Walnut swirl">
+        Melc cu nucă
+      </span>
 
         <span class="size"></span>
 
@@ -772,9 +805,11 @@
 
       <div class="item">
 
-        <span class="name">
-          Melc cu mac
-        </span>
+      <span class="name"
+            data-ro="Melc cu mac"
+            data-en="Poppy seed swirl">
+        Melc cu mac
+      </span>
 
         <span class="size"></span>
 
@@ -808,6 +843,40 @@
 
 
   </main>
+
+  <script>
+  const languageButtons = document.querySelectorAll('.lang-btn');
+  const translatedElements = document.querySelectorAll('[data-ro][data-en]');
+
+  function setLanguage(language) {
+
+    translatedElements.forEach(element => {
+      element.textContent = element.dataset[language];
+    });
+
+    languageButtons.forEach(button => {
+      button.classList.toggle(
+        'active',
+        button.dataset.lang === language
+      );
+    });
+
+    document.documentElement.lang = language;
+
+    localStorage.setItem('kin-language', language);
+  }
+
+  languageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  const savedLanguage =
+    localStorage.getItem('kin-language') || 'ro';
+
+  setLanguage(savedLanguage);
+</script>
 
 </body>
 
