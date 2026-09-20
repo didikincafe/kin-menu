@@ -375,11 +375,12 @@ body {
 /* MAIN SECTIONS */
 
 .main-section {
-
-  margin-bottom: 70px;
-
+  margin-bottom: 64px;
   scroll-margin-top: 88px;
+}
 
+.main-section + .main-section {
+  margin-top: 0;
 }
 
 
@@ -530,6 +531,92 @@ body {
   margin-bottom: 12px;
 
 }
+/* ===== PRODUCT DETAILS ===== */
+
+.item-with-details {
+  row-gap: 2px;
+  margin-bottom: 11px;
+}
+
+.product-details {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 9px;
+  margin-top: 1px;
+}
+
+.ingredients {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.15px;
+  opacity: 0.58;
+}
+
+.allergen {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.15px;
+  opacity: 0.78;
+}
+
+.may-contain {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 1.45;
+  font-style: italic;
+  opacity: 0.52;
+}
+
+.allergen strong {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+}
+
+.nutrition-link {
+  display: inline-block;
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.65;
+  border-bottom: 1px solid rgba(47, 32, 24, 0.25);
+  padding-bottom: 2px;
+}
+
+
+.nutrition-link:hover {
+  opacity: 1;
+}
+
+.product-nutrition-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.3px;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.55;
+  border-bottom: 1px solid rgba(47, 32, 24, 0.18);
+}
+
+.product-nutrition-link:hover {
+  opacity: 1;
+}
 
 
 .name {
@@ -581,26 +668,19 @@ body {
 /* MILK ALTERNATIVES */
 
 .info-card {
-
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 
-  margin-top: 26px;
+  margin-top: 32px;
+  margin-bottom: 0;
 
-  padding:
-    14px 18px 14px 6px;
+  padding: 14px 18px 14px 6px;
 
-  background:
-    rgba(250, 247, 242, 0.50);
+  background: rgba(250, 247, 242, 0.50);
 
-  border:
-    1px solid rgba(54, 39, 34, 0.16);
-
+  border: 1px solid rgba(54, 39, 34, 0.16);
   border-radius: 18px;
-
 }
 
 
@@ -766,7 +846,86 @@ footer span {
 
 }
 
+/* ===== NUTRITION ===== */
 
+.nutrition-section {
+  margin-top: 70px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(47, 32, 24, 0.2);
+  scroll-margin-top: 30px;
+}
+
+.nutrition-section h2 {
+  margin: 0 0 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.nutrition-note {
+  margin: 0 0 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  line-height: 1.5;
+  opacity: 0.55;
+}
+
+.nutrition-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nutrition-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+}
+
+.nutrition-table th {
+  padding: 9px 7px;
+  text-align: left;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(47, 32, 24, 0.25);
+}
+
+.nutrition-table td {
+  padding: 10px 7px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(47, 32, 24, 0.1);
+}
+
+.nutrition-table td:first-child {
+  font-weight: 500;
+  min-width: 125px;
+}
+
+.nutrition-table small {
+  font-size: 7px;
+  opacity: 0.55;
+}
+
+.back-to-menu {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.65;
+}
+
+.back-to-menu:hover {
+  opacity: 1;
+}
 
 /* PHONE */
 
@@ -907,9 +1066,13 @@ footer span {
 
   /* ===== SECTIONS ===== */
 
-  .main-section {
-    margin-bottom: 58px;
-  }
+.main-section {
+  margin-bottom: 50px;
+}
+
+.main-section + .main-section {
+  margin-top: 0;
+}
 
 
   .section-heading {
@@ -972,6 +1135,34 @@ footer span {
     padding-right: 12px;
   }
 
+  .item-with-details {
+  margin-bottom: 11px;
+}
+
+.product-details {
+  grid-column: 1 / 3;
+  gap: 3px 7px;
+}
+
+.ingredients,
+.allergen {
+  font-size: 7px;
+  line-height: 1.45;
+}
+
+.product-nutrition-link {
+  font-size: 6.5px;
+}
+
+.may-contain {
+  font-size: 6.5px;
+}
+
+.nutrition-link {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 7px;
+}
 
   .name {
     font-size: 11px;
@@ -996,19 +1187,21 @@ footer span {
 
   /* ===== MILK ALTERNATIVES ===== */
 
-  .info-card {
-    display: flex;
-    align-items: center;
+.info-card {
+  display: flex;
+  align-items: center;
 
-    gap: 16px;
+  gap: 16px;
 
-    min-height: 142px;
+  min-height: 142px;
 
-    padding: 14px 22px 14px 14px;
+  margin-top: 26px;
+  margin-bottom: 0;
 
-    border-radius: 18px;
-  }
+  padding: 14px 22px 14px 14px;
 
+  border-radius: 18px;
+}
 
   .info-icon-wrap {
     flex: 0 0 105px;
@@ -1064,6 +1257,46 @@ footer span {
     font-size: 10px;
   }
 
+  .nutrition-section {
+  margin-top: 55px;
+  padding-top: 24px;
+}
+
+.nutrition-section h2 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.nutrition-note {
+  font-size: 7px;
+  margin-bottom: 18px;
+}
+
+.nutrition-table-wrap {
+  margin-right: -10px;
+  padding-bottom: 6px;
+}
+
+.nutrition-table {
+  min-width: 620px;
+  font-size: 7px;
+}
+
+.nutrition-table td {
+  padding: 9px 6px;
+}
+
+.nutrition-table td:first-child {
+  min-width: 115px;
+}
+
+.nutrition-table th {
+  font-size: 6px;
+}
+
+.back-to-menu {
+  font-size: 7px;
+}
 }
 
 
@@ -1086,7 +1319,7 @@ footer span {
     padding-right: 2px;
   }
 
-  .language-switch a.active {
+.language-switch .lang-btn.active {
   opacity: 1;
   font-weight: 600;
 }
